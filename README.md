@@ -36,16 +36,5 @@ home page to review any articles they would like to save.
 
 ![Scraper](/public/assets/images/deleted.png)
 
-Lastly there is also space for testimonials and contact information at the bottom of the home page.
 
-
-
-This application was deployed using Heroku and the dotenv npm package was used to protect
-sensitive information. 
-
-This project is useful because it bridges a gap between those in need who are often unable
-to obtain the services they need due to outdated information. Agencies who choose to participate
-in our application will be inputting their data in real-time which will decrease or eliminate an
-already frustrated population with coming face-to-face with dead-ends and more quickly connecting 
-them with the services they need. 
 
