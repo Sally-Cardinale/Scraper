@@ -1,19 +1,20 @@
 // Server routes
-// ++++++++++++++++++
+// =====================
 
-// Bring in the Scrape function from out scripts directory
+//Bring in scrape function from the scripts directory
 var scrape = require("../scripts/scrape");
 
-// Bring in headlines and notes from the controller
+//Bring headlines and notes from the controllers
 var headlinesController = require("../controllers/headlines");
 var notesController = require("../controllers/notes");
 
 module.exports = function (router) {
-  // This route renders the homepage
+  //route renders homepage
   router.get("/", function (req, res) {
     res.render("home");
   });
-  //This rourte renders the saved handlebars
+
+  //this route renders the saved articles page
   router.get("/saved", function (req, res) {
     res.render("saved");
   });
@@ -24,7 +25,8 @@ module.exports = function (router) {
         res.json({
           message: "No new articles today. Check back tomorrow!"
         });
-      } else {
+      }
+      else {
         res.json({
           message: "Added " + docs.insertedCount + " new articles!"
         });
@@ -81,6 +83,4 @@ module.exports = function (router) {
       res.json(data);
     });
   });
-
-
 }

@@ -1,5 +1,5 @@
 // scrape script
-// +++++++++++++++++++
+// -------------
 
 // Require request and cheerio, allowing scrapes
 var request = require("request");
@@ -42,23 +42,5 @@ var scrape = function (cb) {
     };
   });
 }
-
-
-
-// **********
-//     request('https://www.washingtonpost.com/', (error, response, body) => {
-//   if (!error && response.statusCode == 200) {
-//     const $ = cheerio.load(body);
-
-//     const headline = $('.headline');
-//     const blurb = $('.blurb');
-
-//     console.log(headline.text(), blurb.text());
-//   }
-// });
-
-// ** check this to see if this is the right class in NY Times
-// $(".theme-summary").each(function (i, element) {
-
 
 module.exports = scrape;

@@ -1,8 +1,8 @@
-// Bring in scrape script and makeDate scripts
+//Bring in scrape script and makeDate script
 var scrape = require("../scripts/scrape");
 var makeDate = require("../scripts/date");
 
-// Bring in the Headline and Note mongoose models
+//Bring in the Headline and Note mongoose models
 var Headline = require("../models/Headline");
 
 module.exports = {
@@ -14,9 +14,7 @@ module.exports = {
         articles[i].saved = false;
       }
 
-      Headline.collection.insertMany(articles, {
-        ordered: false
-      }, function (err, docs) {
+      Headline.collection.insertMany(articles, { ordered: false }, function (err, docs) {
         cb(err, docs);
       });
     });
@@ -34,9 +32,7 @@ module.exports = {
       });
   },
   update: function (query, cb) {
-    Headline.update({
-      _id: query._id
-    }, {
+    Headline.update({ _id: query._id }, {
       $set: query
     }, {}, cb);
   }
