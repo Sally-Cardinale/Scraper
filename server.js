@@ -34,7 +34,7 @@ app.use(bodyParser.urlencoded({
 app.use(router);
 
 //If deployed, use the deployed database; otherwise, use the local mongoHeadlines DB
-var db = process.env.MONGODB_URI || "mongodb://localhost/Regina_DB";
+var db = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
 //Connect mongoose to the database
 mongoose.connect(db, {
